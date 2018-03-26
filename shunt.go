@@ -4,7 +4,7 @@ import (
     "fmt"
 )
 
-func intopost(infix string) string {
+func Intopost(infix string) string {
     // creating a map of special characters and assigning them a value
     specials := map[rune]int{'*': 10, '.': 9, '|': 8}
 
@@ -66,22 +66,22 @@ func intopost(infix string) string {
 
     // return the postfix array cast to a string
     return string(postfix)
-}// intopost
+}// Intopost
 
 func main() {
     // Answer: ab.c*.
     fmt.Println("Infix:   ", "a.b.c*")
-    fmt.Println("Postfix: ", intopost("a.b.c*"))
+    fmt.Println("Postfix: ", Intopost("a.b.c*"))
 
     // Answer: abd|.*
     fmt.Println("Infix:   ", "(a.(b|d))*")
-    fmt.Println("Postfix: ", intopost("(a.(b|d))*"))
+    fmt.Println("Postfix: ", Intopost("(a.(b|d))*"))
 
     // Answer: abd|.c*
     fmt.Println("Infix:   ", "(a.(b|d)).c*")
-    fmt.Println("Postfix: ", intopost("(a.(b|d)).c*"))
+    fmt.Println("Postfix: ", Intopost("(a.(b|d)).c*"))
     
     // Answer: abb.+.c.
     fmt.Println("Infix:   ", "a.(b.b)+.c")
-    fmt.Println("Postfix: ", intopost("a.(b.b)+.c"))
+    fmt.Println("Postfix: ", Intopost("a.(b.b)+.c"))
 }// main
